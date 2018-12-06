@@ -8,10 +8,6 @@ var bodyParser = require('body-parser')
 
 var index = require('./routes/index')
 var tms = require('./routes/tms')
-var supportMsg = require('./routes/wechat')
-var baseInfo = require('./routes/baseInfo')
-var testProxy = require('./routes/Proxy')
-var teacher = require('./routes/teacher')
 
 var app = express()
 
@@ -27,10 +23,6 @@ app.use(cookieParser())
 app.use(express.static('public'))
 app.use('/', index)
 app.use('/tms', tms)
-app.use('/baseInfo', baseInfo)
-app.use('/supportMsg', supportMsg)
-app.use('/testProxy', testProxy)
-app.use('/teacher', teacher)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
