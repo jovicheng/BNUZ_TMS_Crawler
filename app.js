@@ -8,6 +8,7 @@ var bodyParser = require('body-parser')
 
 var index = require('./routes/index')
 var tms = require('./routes/tms')
+var ios = require('./routes/ios')
 
 var app = express()
 
@@ -23,6 +24,8 @@ app.use(cookieParser())
 app.use(express.static('public'))
 app.use('/', index)
 app.use('/tms', tms)
+//iOS测试用
+app.use('/ios', ios)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
